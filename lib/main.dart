@@ -1,4 +1,4 @@
-import 'package:bagshop_ui_flutter_with_animation/pages/home_page.dart';
+import 'package:bagshop_ui_flutter_with_animation/pages/home/home_page.dart';
 import 'package:bagshop_ui_flutter_with_animation/theme.dart';
 import 'package:flutter/material.dart';
 

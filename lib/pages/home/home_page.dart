@@ -1,3 +1,4 @@
+import 'package:bagshop_ui_flutter_with_animation/pages/home/component/body.dart';
 import 'package:bagshop_ui_flutter_with_animation/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: buildAppBar(context, size),
+      body: Body(),
     );
   }
 
