@@ -1,4 +1,5 @@
 import 'package:bagshop_ui_flutter_with_animation/models/Product.dart';
+import 'package:bagshop_ui_flutter_with_animation/pages/detail/detail_page.dart';
 import 'package:bagshop_ui_flutter_with_animation/pages/home/component/categories.dart';
 import 'package:bagshop_ui_flutter_with_animation/pages/home/component/item_card.dart';
 import 'package:bagshop_ui_flutter_with_animation/theme.dart';
@@ -36,7 +37,14 @@ class Body extends StatelessWidget {
               itemCount: products.length,
               itemBuilder: (context, index) => ItemCard(
                 product: products[index],
-                press: () {},
+                press: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailPage(
+                      product: products[index],
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
