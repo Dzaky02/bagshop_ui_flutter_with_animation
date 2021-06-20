@@ -1,8 +1,11 @@
 import 'package:bagshop_ui_flutter_with_animation/models/Product.dart';
-import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/color_options.dart';
+import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/cart_counter.dart';
+import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/color_and_size.dart';
+import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/description.dart';
 import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/product_title_with_image.dart';
 import 'package:bagshop_ui_flutter_with_animation/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   const Body({required this.product});
@@ -34,41 +37,16 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      ColorAndSize(product: product),
+                      Description(product: product),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('Color'),
-                                ColorOptions(),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: RichText(
-                              text: TextSpan(
-                                style: TextStyle(color: mTextColor),
-                                children: [
-                                  TextSpan(text: 'Size\n'),
-                                  TextSpan(
-                                    text: '${product.size} cm',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headline5
-                                        ?.copyWith(fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          CartCounter(),
                         ],
                       ),
-                      SizedBox(
-                        height: mDefaultPadding,
-                      ),
-                      Text(product.description)
                     ],
                   ),
                 ),

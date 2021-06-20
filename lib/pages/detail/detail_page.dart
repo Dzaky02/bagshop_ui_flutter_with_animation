@@ -39,7 +39,7 @@ class DetailPage extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () => buildSnackBar(context, 'Chart Clicked', size),
+          onPressed: () => buildSnackBar(context, 'Cart Clicked', size),
           icon: SvgPicture.asset(
             'assets/icons/cart.svg',
             color: Colors.white70,

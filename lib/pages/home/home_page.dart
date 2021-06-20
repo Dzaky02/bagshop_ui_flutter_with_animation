@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
         ),
         IconButton(
           onPressed: () {
-            buildSnackBar(context, "Chart Button Clicked", size);
+            buildSnackBar(context, "Cart Button Clicked", size);
           },
           icon: SvgPicture.asset(
             "assets/icons/cart.svg",
