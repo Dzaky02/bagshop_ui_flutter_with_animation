@@ -1,4 +1,5 @@
 import 'package:bagshop_ui_flutter_with_animation/models/Product.dart';
+import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/add_cart_and_buy_btn.dart';
 import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/cart_counter.dart';
 import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/color_and_size.dart';
 import 'package:bagshop_ui_flutter_with_animation/pages/detail/component/description.dart';
@@ -23,12 +24,12 @@ class Body extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  height: size.height / 2,
                   margin: EdgeInsets.only(top: size.height / 2.6),
                   padding: EdgeInsets.only(
                     top: size.height * 0.12,
                     left: mDefaultPadding,
                     right: mDefaultPadding,
+                    bottom: mDefaultPadding,
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -48,6 +49,10 @@ class Body extends StatelessWidget {
                           FavoriteButton(),
                         ],
                       ),
+                      SizedBox(
+                        height: mDefaultPadding,
+                      ),
+                      AddCartAndBuyButton(size: size, product: product),
                     ],
                   ),
                 ),
