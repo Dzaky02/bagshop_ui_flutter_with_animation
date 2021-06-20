@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
                     right: mDefaultPadding,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.white70,
+                    color: Colors.white,
                     borderRadius: BorderRadius.vertical(
                       top: Radius.circular(16),
                     ),
@@ -37,15 +37,31 @@ class Body extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Color'),
-                              ColorOptions(),
-                            ],
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Color'),
+                                ColorOptions(),
+                              ],
+                            ),
                           ),
-                          Column(
-                            children: [],
+                          Expanded(
+                            child: RichText(
+                              text: TextSpan(
+                                style: TextStyle(color: mTextColor),
+                                children: [
+                                  TextSpan(text: 'Size\n'),
+                                  TextSpan(
+                                    text: '${product.size} cm',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline5
+                                        ?.copyWith(fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
                         ],
                       ),

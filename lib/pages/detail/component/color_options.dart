@@ -23,7 +23,6 @@ class _ColorOptionsState extends State<ColorOptions> {
     return Padding(
       padding: const EdgeInsets.only(top: mDefaultPadding / 4),
       child: SizedBox(
-        width: size.width / 2 - mDefaultPadding * 2,
         height: 24,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
