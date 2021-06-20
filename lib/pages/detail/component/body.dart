@@ -45,6 +45,16 @@ class Body extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CartCounter(),
+                          Container(
+                            height: 32,
+                            width: 32,
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFF6464),
+                              shape: BoxShape.circle,
+                            ),
+                            child: SvgPicture.asset('assets/icons/heart.svg'),
+                          )
                         ],
                       ),
                     ],
