@@ -19,7 +19,6 @@ class _ColorOptionsState extends State<ColorOptions> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(top: mDefaultPadding / 4),
       child: SizedBox(
